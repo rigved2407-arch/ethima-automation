@@ -146,14 +146,18 @@
 </div>
 <!-- Quick Action Controls -->
 <div class="grid grid-cols-2 gap-2 pt-1">
-<button class="flex items-center justify-center gap-2 py-2.5 px-3 bg-surface-container rounded-lg text-onyx-muted hover:bg-surface-container-high transition-colors" id="btnTestSimulator">
+<button type="button" class="flex items-center justify-center gap-2 py-2.5 px-3 bg-surface-container rounded-lg text-onyx-muted hover:bg-surface-container-high transition-colors" id="btnTestSimulator">
 <span class="material-symbols-outlined text-[18px] text-primary">play_circle</span>
 <span class="font-label-caps text-label-caps uppercase tracking-wider">Test Live Flow</span>
 </button>
-<button class="flex items-center justify-center gap-2 py-2.5 px-3 bg-onyx-muted text-surface rounded-lg shadow-sm hover:bg-primary transition-colors">
+<button type="button" class="flex items-center justify-center gap-2 py-2.5 px-3 bg-onyx-muted text-surface rounded-lg shadow-sm hover:bg-primary transition-colors">
 <span class="material-symbols-outlined text-[18px]">add_circle</span>
 <span class="font-label-caps text-label-caps uppercase tracking-wider">+ Create Node</span>
 </button>
+</div>
+<div id="simulatorStatus" class="flex items-start gap-2 rounded-lg border border-primary/20 bg-primary/5 px-3 py-2 text-[11px] text-on-surface-variant" role="status" aria-live="polite">
+<span class="material-symbols-outlined text-[16px] text-primary">science</span>
+<span><strong class="text-onyx-muted">Demo mode:</strong> no real WhatsApp message is sent. Test Live Flow simulates the webhook and updates this page.</span>
 </div>
 </section>
 <!-- Live Conversational Simulator (Interactive WhatsApp Chat Preview) -->
@@ -583,11 +587,50 @@
       showToast(`Loaded full encrypted WhatsApp thread for ${clientName}`);
     }
 
+    function setSimulatorStatus(message, icon = 'science', tone = 'default') {
+      const status = document.getElementById('simulatorStatus');
+      if (!status) return;
+      const iconEl = status.querySelector('.material-symbols-outlined');
+      if (iconEl) iconEl.textContent = icon;
+      status.classList.remove('bg-primary/5', 'bg-tertiary-fixed-dim/30', 'bg-emerald-sage/10', 'border-primary/20', 'border-tertiary/30', 'border-emerald-sage/30');
+      if (tone === 'running') status.classList.add('bg-tertiary-fixed-dim/30', 'border-tertiary/30');
+      else if (tone === 'success') status.classList.add('bg-emerald-sage/10', 'border-emerald-sage/30');
+      else status.classList.add('bg-primary/5', 'border-primary/20');
+      const copy = status.querySelector('span:last-child');
+      if (copy) copy.innerHTML = `<strong class="text-onyx-muted">Demo mode:</strong> ${message}`;
+    }
+
+    function runDemoFlow() {
+      const testBtn = document.getElementById('btnTestSimulator');
+      if (!testBtn || testBtn.disabled) return;
+      const label = testBtn.querySelector('span:last-child');
+      const icon = testBtn.querySelector('.material-symbols-outlined');
+      testBtn.disabled = true;
+      testBtn.classList.add('opacity-70', 'cursor-wait');
+      if (label) label.textContent = 'Running Demo...';
+      if (icon) icon.textContent = 'sync';
+      setSimulatorStatus('simulating webhook ingress from a Click-to-WhatsApp ad...', 'sync', 'running');
+      showToast('Demo started: simulating WhatsApp webhook ingress...');
+
+      setTimeout(() => {
+        setSimulatorStatus('webhook accepted; preference quiz dispatched to the simulated customer.', 'cloud_done', 'running');
+        showToast('Webhook accepted. Preference quiz dispatched.');
+      }, 900);
+
+      setTimeout(() => {
+        simulateSelection('Engagement Rings');
+        setSimulatorStatus('flow completed: simulated customer selected Engagement Rings and entered the concierge path.', 'check_circle', 'success');
+        showToast('Demo complete: customer routed to the concierge workflow.');
+        testBtn.disabled = false;
+        testBtn.classList.remove('opacity-70', 'cursor-wait');
+        if (label) label.textContent = 'Run Again';
+        if (icon) icon.textContent = 'replay';
+      }, 1900);
+    }
+
     const testBtn = document.getElementById('btnTestSimulator');
     if (testBtn) {
-      testBtn.addEventListener('click', () => {
-        showToast('Initiating WhatsApp Sandbox Webhook ping to +91 98200 XXXXX...');
-      });
+      testBtn.addEventListener('click', runDemoFlow);
     }
   </script>
 </div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_24px_rgba(26,26,26,0.04)]" data-active-classes="text-primary"><div class="flex justify-around items-center h-20 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] h-14 text-on-surface-variant transition-colors group" data-path="funnels" href="#"><span class="material-symbols-outlined text-[22px] group-hover:text-primary transition-colors">filter_alt</span><span class="font-label-caps text-label-caps tracking-widest mt-1 text-[10px] group-hover:text-primary transition-colors uppercase">Funnels</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] h-14 transition-colors group text-primary" data-path="whatsapp-flow" href="#"><span class="material-symbols-outlined text-[22px] group-hover:text-primary transition-colors">chat_bubble</span><span class="font-label-caps text-label-caps tracking-widest mt-1 text-[10px] group-hover:text-primary transition-colors uppercase">WhatsApp</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] h-14 text-on-surface-variant transition-colors group" data-path="custom-studio" href="#"><span class="material-symbols-outlined text-[22px] group-hover:text-primary transition-colors">diamond</span><span class="font-label-caps text-label-caps tracking-widest mt-1 text-[10px] group-hover:text-primary transition-colors uppercase">Studio</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] h-14 text-on-surface-variant transition-colors group" data-path="analytics" href="#"><span class="material-symbols-outlined text-[22px] group-hover:text-primary transition-colors">query_stats</span><span class="font-label-caps text-label-caps tracking-widest mt-1 text-[10px] group-hover:text-primary transition-colors uppercase">Analytics</span></a></div></nav></body></html>
