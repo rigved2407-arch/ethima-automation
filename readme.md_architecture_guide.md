@@ -1,80 +1,91 @@
-# ethima.in Customer Acquisition & Automation CRM
+# Ethima WhatsApp Concierge MVP
 
-A luxury omnichannel acquisition CRM and automation prototype suite engineered for **ethima fine jewellery**, specializing in bespoke lab-grown diamond enquiries, website and Instagram conversations, WhatsApp journeys, and salon appointments.
+A focused customer-enquiry and WhatsApp handoff prototype for ethima fine jewellery.
 
----
+This repository is scoped as a **₹49,000 MVP setup**, not as a full custom CRM or ecommerce automation platform.
 
-## 📁 Repository Structure
+## Included MVP scope
+
+The proposed first version covers one simple workflow:
 
 ```text
-ethima-automation/
-├── index.html                 # Screen 1: Store Owner Overview (Intuitive Executive Briefing)
-├── funnels.html               # Screen 2: Omnichannel Store Funnels Dashboard
-├── whatsapp-workflow.html     # Screen 3: WhatsApp Concierge Acquisition Workflow & Sandbox
-├── custom-studio.html         # Screen 4: Bespoke 3D Diamond Studio Lead Qualification Funnel
-├── analytics.html             # Screen 5: Automation Attribution & ROI Engine
-├── README.md                  # System architecture, deployment & integration guide
-└── workflows/
-    ├── webhook-schema.json    # Ingress payloads from website, Instagram, QR and web popups
-    └── whatsapp-templates.md  # Meta-approved message template copy & buttons
+Website / Instagram / QR / Referral / Direct WhatsApp enquiry
+        → basic preference questions
+        → approved product information
+        → appointment-link sharing
+        → manual stylist or gemologist handoff
 ```
 
----
+The MVP is designed to reduce missed enquiries and give the store team a consistent first response. It does not promise automatic sales, revenue outcomes, or fully autonomous customer service.
 
-## 💎 Designed Screens
+## What is included
 
-1. **`index.html` (Store Owner Overview)**:
-   - Built specifically for jewelry atelier owners without technical jargon.
-   - Live revenue metrics (`₹38.4 Lakhs` automated revenue, `68 Consultations`).
-   - VIP human takeover queue with 1-tap WhatsApp handoff.
-   - High-intent active automations: Instant WhatsApp Welcome & Cart/Browse Recovery.
+- One WhatsApp enquiry flow.
+- Basic questions for jewellery category, preferred style, and consultation intent.
+- Three sample product categories: engagement rings, solitaire pendants, and tennis bracelets.
+- Approved product images, short descriptions, and selected media links.
+- One appointment-link handoff for salon or video consultation.
+- Manual takeover by a stylist or gemologist.
+- A simple owner view showing sample enquiry and handoff activity.
+- Basic setup guidance, workflow testing, and a staff walkthrough.
 
-2. **`funnels.html` (Omnichannel Store Funnels)**:
-   - Full acquisition funnel tracking: Website / Instagram / QR Enquiry $\to$ 3D Configurator $\to$ Spec Selection $\to$ Concierge Call.
-   - Real-time customer activity stream across salon locations (Mumbai, Delhi-NCR, Bengaluru).
+## What is not included in the ₹49,000 MVP
 
-3. **`whatsapp-workflow.html` (WhatsApp Concierge Workflow)**:
-   - Interactive WhatsApp sandbox simulating enquiry greeting, cut selection, 4K video drop, and gemologist audio note.
-   - 5-stage automated pipeline nodes (Quiz, Lookbook, Cal.com scheduling, Razorpay handoff, Milestone concierge).
-   - VIP human takeover triage queue.
+The following are explicitly outside this package and require a separate quote:
 
-4. **`custom-studio.html` & `analytics.html`**:
-   - Custom bespoke studio qualification tracking and complete ROI attribution modeling.
+- Custom CRM development or a multi-user CRM workspace.
+- Payment links, Razorpay, UPI, EMI, orders, refunds, or payment webhooks.
+- Ecommerce or inventory synchronisation.
+- Bespoke CAD, 3D design, sizing-kit logistics, or production tracking.
+- Automated aftercare, anniversary, referral, or repeat-purchase campaigns.
+- Advanced analytics, revenue attribution, AI agents, or predictive scoring.
+- Multi-location routing or complex staff permissions.
+- Paid advertising automation, Meta Ads, Google Ads, or campaign management.
+- Custom mobile applications or a custom backend dashboard.
 
----
+The repository may retain earlier concept screens as **reference material only**. They are not included in the MVP implementation or price.
 
-## 🚀 Quick Setup & Deployment
+## Prototype status
 
-### 1. Local Preview
-Open any `.html` file directly in your browser or run a lightweight local server:
+The current HTML screens contain simulated data and interactions for workflow review. They do not currently send real WhatsApp messages, store real customer information, create live appointments, or process payments.
+
+A working MVP would still require:
+
+1. An approved WhatsApp provider account.
+2. A verified business number and approved message templates.
+3. A small backend or provider workflow configuration.
+4. Secure storage for the minimum customer details required by the flow.
+5. The store's approved product copy, images, links, appointment URL, and handoff rules.
+6. Testing with real staff before any production launch.
+
+## Monthly maintenance scope
+
+The proposed ₹10,000/month maintenance plan should cover only:
+
+- Monitoring the included WhatsApp flow.
+- Up to four support hours or two small content changes per month.
+- Updating product links, approved copy, or appointment links.
+- Minor fixes and one monthly review.
+
+New workflows, integrations, dashboards, payment features, bespoke studio features, and major redesigns require a separate quote.
+
+## Local preview
+
+Open `index.html` directly in a browser or run a lightweight server:
+
 ```bash
-# Using Python
 python3 -m http.server 3000
-
-# Using Node / npx
-npx serve .
 ```
 
-### 2. Pushing to your GitHub Repository
-To initialize or push updates into your GitHub repo (`https://github.com/rigved2407-arch/ethima-automation.git`):
+## Relevant screens
 
-```bash
-# Clone the repository locally
-git clone https://github.com/rigved2407-arch/ethima-automation.git
-cd ethima-automation
+- `index.html` — MVP overview and scope.
+- `store_owner_overview/code.html` — sample owner view.
+- `whatsapp_concierge_workflow/code.html` — the included WhatsApp sandbox flow.
+- `omnichannel_store_funnels/code.html` — reference enquiry board.
+- `custom_studio_lead_funnel/code.html` — future-scope reference screen, not part of the MVP.
+- `automation_analytics_roi/code.html` — future-scope reference screen, not part of the MVP.
 
-# Copy your HTML files and documentation into the folder, then commit:
-git add .
-git commit -m "feat: add ethima CRM screens and automation architecture"
-git branch -M main
-git push -u origin main
-```
+## Third-party costs
 
----
-
-## 🔌 Integration Roadmap
-
-- **WhatsApp Provider**: WhatsApp Cloud API through an approved provider such as Interakt, AiSensy, or Wati.
-- **E-Commerce Webhooks**: Shopify / WooCommerce order & abandoned checkout events.
-- **Calendar & Appointments**: Cal.com or Google Meet API for salon gemologist consultations.
-- **Payment Gateway**: Razorpay SmartCollect / Payment Links with 0% EMI split.
+The owner pays separately for any WhatsApp provider subscription, message charges, hosting, storage, calendar software, taxes, and other external services. The MVP setup fee does not include those charges.
