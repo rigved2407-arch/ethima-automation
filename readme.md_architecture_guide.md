@@ -1,6 +1,6 @@
 # ethima.in Customer Acquisition & Automation CRM
 
-A luxury omnichannel acquisition CRM and automation prototype suite engineered for **ethima fine jewellery**, specializing in bespoke lab-grown diamond acquisition, Click-to-WhatsApp (CTWA) journeys, and salon appointments.
+A luxury omnichannel acquisition CRM and automation prototype suite engineered for **ethima fine jewellery**, specializing in bespoke lab-grown diamond enquiries, website and Instagram conversations, WhatsApp journeys, and salon appointments.
 
 ---
 
@@ -15,7 +15,7 @@ ethima-automation/
 ├── analytics.html             # Screen 5: Automation Attribution & ROI Engine
 ├── README.md                  # System architecture, deployment & integration guide
 └── workflows/
-    ├── webhook-schema.json    # Ingress payloads from Meta Ads & Web popups
+    ├── webhook-schema.json    # Ingress payloads from website, Instagram, QR and web popups
     └── whatsapp-templates.md  # Meta-approved message template copy & buttons
 ```
 
@@ -30,11 +30,11 @@ ethima-automation/
    - High-intent active automations: Instant WhatsApp Welcome & Cart/Browse Recovery.
 
 2. **`funnels.html` (Omnichannel Store Funnels)**:
-   - Full acquisition funnel tracking: Meta Ads $\to$ 3D Configurator $\to$ Spec Selection $\to$ Concierge Call.
+   - Full acquisition funnel tracking: Website / Instagram / QR Enquiry $\to$ 3D Configurator $\to$ Spec Selection $\to$ Concierge Call.
    - Real-time customer activity stream across salon locations (Mumbai, Delhi-NCR, Bengaluru).
 
 3. **`whatsapp-workflow.html` (WhatsApp Concierge Workflow)**:
-   - Interactive WhatsApp sandbox simulating ad greeting, cut selection, 4K video drop, and gemologist audio note.
+   - Interactive WhatsApp sandbox simulating enquiry greeting, cut selection, 4K video drop, and gemologist audio note.
    - 5-stage automated pipeline nodes (Quiz, Lookbook, Cal.com scheduling, Razorpay handoff, Milestone concierge).
    - VIP human takeover triage queue.
 
@@ -74,7 +74,7 @@ git push -u origin main
 
 ## 🔌 Integration Roadmap
 
-- **WhatsApp Provider**: Meta Cloud API, Interakt, AiSensy, or Wati.
+- **WhatsApp Provider**: WhatsApp Cloud API through an approved provider such as Interakt, AiSensy, or Wati.
 - **E-Commerce Webhooks**: Shopify / WooCommerce order & abandoned checkout events.
 - **Calendar & Appointments**: Cal.com or Google Meet API for salon gemologist consultations.
 - **Payment Gateway**: Razorpay SmartCollect / Payment Links with 0% EMI split.
