@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ethima Atelier CRM prototype — a luxury omnichannel customer acquisition and automation concept for fine jewellery." />
+  <title>Ethima Atelier CRM — Automation Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&family=Playfair+Display:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            alabaster: '#fbf9f6',
+            cream: '#f5f0eb',
+            onyx: '#1b1c1a',
+            muted: '#6f675b',
+            champagne: '#c5a059',
+            emerald: '#2d4b3e',
+            hairline: '#e5dfd7'
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body { background: #fbf9f6; color: #1b1c1a; }
+    .hairline { border-color: #e5dfd7; }
+    .soft-shadow { box-shadow: 0 10px 35px rgba(33, 28, 20, .06), 0 0 1px rgba(197, 160, 89, .28); }
+    .gold-rule { background: linear-gradient(90deg, #c5a059, rgba(197,160,89,0)); }
+  </style>
+</head>
+<body class="font-body antialiased selection:bg-[#e8d7aa]">
+  <header class="border-b hairline bg-alabaster/90 backdrop-blur sticky top-0 z-20">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8">
+      <a href="./" class="flex items-center gap-3">
+        <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#c5a059]/15 text-champagne">
+          <span class="material-symbols-outlined">diamond</span>
+        </span>
+        <span>
+          <span class="block font-display text-xl leading-none">ethima</span>
+          <span class="mt-1 block text-[10px] font-semibold uppercase tracking-[.2em] text-champagne">Atelier CRM</span>
+        </span>
+      </a>
+      <span class="hidden items-center gap-2 rounded-full bg-emerald/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[.16em] text-emerald sm:flex">
+        <span class="h-1.5 w-1.5 rounded-full bg-emerald"></span>
+        Prototype review
+      </span>
+    </div>
+  </header>
+
+  <main>
+    <section class="mx-auto max-w-6xl px-5 pb-14 pt-16 lg:px-8 lg:pb-20 lg:pt-24">
+      <div class="max-w-3xl">
+        <p class="mb-5 text-[11px] font-semibold uppercase tracking-[.22em] text-champagne">Customer acquisition & automation</p>
+        <h1 class="font-display text-5xl leading-[1.05] tracking-tight sm:text-6xl">A calmer, more personal way to grow a fine jewellery business.</h1>
+        <div class="gold-rule mt-8 h-px w-32"></div>
+        <p class="mt-7 max-w-2xl text-base leading-8 text-muted sm:text-lg">
+          This is a visual prototype of the Ethima Atelier CRM: an omnichannel journey that turns ad clicks, custom design enquiries and product interest into thoughtful WhatsApp conversations, consultations and high-intent sales.
+        </p>
+        <div class="mt-9 flex flex-wrap gap-3">
+          <a href="store_owner_overview/code.html" class="inline-flex items-center gap-2 rounded bg-onyx px-5 py-3 text-sm font-semibold text-alabaster transition hover:bg-champagne">
+            Start with the owner overview
+            <span class="material-symbols-outlined text-base">arrow_forward</span>
+          </a>
+          <a href="#screens" class="inline-flex items-center gap-2 rounded border border-champagne px-5 py-3 text-sm font-semibold text-onyx transition hover:bg-cream">
+            Explore all screens
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-14 grid gap-4 sm:grid-cols-3">
+        <div class="rounded-lg border hairline bg-cream p-5">
+          <p class="text-[10px] font-semibold uppercase tracking-[.18em] text-muted">The opportunity</p>
+          <p class="mt-3 font-display text-2xl">Never lose a high-intent conversation.</p>
+        </div>
+        <div class="rounded-lg border hairline bg-cream p-5">
+          <p class="text-[10px] font-semibold uppercase tracking-[.18em] text-muted">The experience</p>
+          <p class="mt-3 font-display text-2xl">Useful, visual, concierge-led.</p>
+        </div>
+        <div class="rounded-lg border hairline bg-cream p-5">
+          <p class="text-[10px] font-semibold uppercase tracking-[.18em] text-muted">The next phase</p>
+          <p class="mt-3 font-display text-2xl">Connect the workflows to real systems.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="screens" class="border-y hairline bg-cream/60">
+      <div class="mx-auto max-w-6xl px-5 py-14 lg:px-8 lg:py-20">
+        <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          <div>
+            <p class="text-[11px] font-semibold uppercase tracking-[.22em] text-champagne">The prototype suite</p>
+            <h2 class="mt-3 font-display text-4xl">Six views of one connected journey.</h2>
+          </div>
+          <p class="max-w-sm text-sm leading-6 text-muted">Open each screen to review the intended workflow with the store team.</p>
+        </div>
+
+        <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <a href="store_owner_overview/code.html" class="group rounded-lg border hairline bg-alabaster p-6 soft-shadow transition hover:-translate-y-1">
+            <span class="text-[11px] font-semibold tracking-[.18em] text-champagne">01 / OWNER VIEW</span>
+            <h3 class="mt-4 font-display text-2xl">Store owner overview</h3>
+            <p class="mt-3 text-sm leading-6 text-muted">Revenue assisted by automation, consultations booked and VIP clients waiting for a human touch.</p>
+            <span class="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-onyx group-hover:text-champagne">Open screen <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+          </a>
+          <a href="omnichannel_store_funnels/code.html" class="group rounded-lg border hairline bg-alabaster p-6 soft-shadow transition hover:-translate-y-1">
+            <span class="text-[11px] font-semibold tracking-[.18em] text-champagne">02 / FUNNELS</span>
+            <h3 class="mt-4 font-display text-2xl">Omnichannel funnels</h3>
+            <p class="mt-3 text-sm leading-6 text-muted">A view of the path from Meta ads and configurator activity to WhatsApp concierge and consultation.</p>
+            <span class="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-onyx group-hover:text-champagne">Open screen <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+          </a>
+          <a href="whatsapp_concierge_workflow/code.html" class="group rounded-lg border hairline bg-alabaster p-6 soft-shadow transition hover:-translate-y-1">
+            <span class="text-[11px] font-semibold tracking-[.18em] text-champagne">03 / CONCIERGE</span>
+            <h3 class="mt-4 font-display text-2xl">WhatsApp workflow</h3>
+            <p class="mt-3 text-sm leading-6 text-muted">A conversational sandbox showing quiz, lookbook, video, appointment, payment and human takeover stages.</p>
+            <span class="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-onyx group-hover:text-champagne">Open screen <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+          </a>
+          <a href="custom_studio_lead_funnel/code.html" class="group rounded-lg border hairline bg-alabaster p-6 soft-shadow transition hover:-translate-y-1">
+            <span class="text-[11px] font-semibold tracking-[.18em] text-champagne">04 / BESPOKE</span>
+            <h3 class="mt-4 font-display text-2xl">Custom studio pipeline</h3>
+            <p class="mt-3 text-sm leading-6 text-muted">Tracks sketch intake, CAD previews, approvals, ring sizing, follow-up nudges and bespoke order stages.</p>
+            <span class="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-onyx group-hover:text-champagne">Open screen <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+          </a>
+          <a href="automation_analytics_roi/code.html" class="group rounded-lg border hairline bg-alabaster p-6 soft-shadow transition hover:-translate-y-1">
+            <span class="text-[11px] font-semibold tracking-[.18em] text-champagne">05 / ROI</span>
+            <h3 class="mt-4 font-display text-2xl">Automation analytics</h3>
+            <p class="mt-3 text-sm leading-6 text-muted">Funnel drop-off, touchpoint activity, automation rules and revenue attribution for decision-making.</p>
+            <span class="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-onyx group-hover:text-champagne">Open screen <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+          </a>
+          <a href="ethima_atelier_crm_prototype/code.html" class="group rounded-lg border hairline bg-alabaster p-6 soft-shadow transition hover:-translate-y-1">
+            <span class="text-[11px] font-semibold tracking-[.18em] text-champagne">06 / OPERATIONS</span>
+            <h3 class="mt-4 font-display text-2xl">CRM operations view</h3>
+            <p class="mt-3 text-sm leading-6 text-muted">An additional funnel operations view for reviewing activity, milestones and salon consultation signals.</p>
+            <span class="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-onyx group-hover:text-champagne">Open screen <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-6xl px-5 py-14 lg:px-8 lg:py-20">
+      <div class="grid gap-10 lg:grid-cols-[1.1fr_.9fr] lg:items-start">
+        <div>
+          <p class="text-[11px] font-semibold uppercase tracking-[.22em] text-champagne">Suggested review conversation</p>
+          <h2 class="mt-3 max-w-xl font-display text-4xl leading-tight">What should we connect first?</h2>
+          <p class="mt-5 max-w-xl text-sm leading-7 text-muted">The screens are intentionally designed to make the backend discussion concrete. Use them to confirm the highest-value journey before implementation begins.</p>
+          <div class="mt-8 space-y-4 text-sm">
+            <div class="flex gap-4"><span class="font-display text-xl text-champagne">01</span><p><strong>Lead intake:</strong> Which ad, website or custom-design events should create a lead?</p></div>
+            <div class="flex gap-4"><span class="font-display text-xl text-champagne">02</span><p><strong>WhatsApp:</strong> Which messages, media and response windows should be automated?</p></div>
+            <div class="flex gap-4"><span class="font-display text-xl text-champagne">03</span><p><strong>Human handoff:</strong> What makes a customer ready for a gemologist or stylist?</p></div>
+            <div class="flex gap-4"><span class="font-display text-xl text-champagne">04</span><p><strong>Measurement:</strong> Which outcomes matter most — consultations, deposits, orders or repeat care?</p></div>
+          </div>
+        </div>
+        <aside class="rounded-lg border border-champagne/40 bg-onyx p-7 text-alabaster soft-shadow">
+          <span class="text-[10px] font-semibold uppercase tracking-[.2em] text-[#e8d7aa]">Prototype status</span>
+          <h3 class="mt-4 font-display text-3xl">Ready for workflow validation.</h3>
+          <p class="mt-4 text-sm leading-7 text-[#d7d1c6]">The current screens are a clickable concept with simulated data and interactions. The next build phase can connect the approved journey to Meta, WhatsApp, the ecommerce store, calendar, payments and CRM records.</p>
+          <div class="mt-7 border-t border-white/15 pt-5 text-xs leading-6 text-[#d7d1c6]">
+            <strong class="text-alabaster">Note:</strong> This prototype does not send messages, take payments or store real customer information yet.
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t hairline bg-cream/50">
+    <div class="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-8 text-xs text-muted sm:flex-row sm:items-center sm:justify-between lg:px-8">
+      <p>Ethima Atelier CRM · Customer acquisition & automation prototype</p>
+      <a href="https://github.com/rigved2407-arch/ethima-automation" target="_blank" rel="noreferrer" class="font-semibold text-onyx hover:text-champagne">View project repository ↗</a>
+    </div>
+  </footer>
+</body>
+</html>
