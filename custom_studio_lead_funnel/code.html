@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "tertiary-fixed-dim": "#adcebd",
+        "on-secondary-fixed-variant": "#474746",
+        "surface-container-low": "#f5f3f0",
+        "secondary-container": "#e2dfde",
+        "secondary-fixed": "#e5e2e1",
+        "surface-container-high": "#eae8e5",
+        "primary-container": "#c5a059",
+        "on-error-container": "#93000a",
+        "surface-container": "#efeeeb",
+        "surface-bright": "#fbf9f6",
+        "background": "#fbf9f6",
+        "cream-surface": "#F5F0EB",
+        "primary-fixed-dim": "#e9c176",
+        "inverse-on-surface": "#f2f0ed",
+        "on-primary-container": "#4e3700",
+        "on-tertiary-fixed-variant": "#2f4d40",
+        "outline": "#7f7667",
+        "on-primary-fixed": "#261900",
+        "error": "#ba1a1a",
+        "tertiary": "#466557",
+        "on-tertiary-fixed": "#012116",
+        "on-tertiary-container": "#234134",
+        "on-secondary": "#ffffff",
+        "on-tertiary": "#ffffff",
+        "outline-variant": "#d1c5b4",
+        "emerald-sage": "#2D4B3E",
+        "hairline-border": "#E5DFD7",
+        "error-container": "#ffdad6",
+        "tertiary-container": "#8cad9d",
+        "on-primary": "#ffffff",
+        "surface": "#fbf9f6",
+        "primary-fixed": "#ffdea5",
+        "surface-container-lowest": "#ffffff",
+        "secondary": "#5f5e5e",
+        "surface-variant": "#e4e2df",
+        "inverse-primary": "#e9c176",
+        "on-surface": "#1b1c1a",
+        "secondary-fixed-dim": "#c8c6c5",
+        "primary": "#775a19",
+        "surface-dim": "#dbdad7",
+        "champagne-pure": "#D4AF37",
+        "surface-tint": "#775a19",
+        "on-primary-fixed-variant": "#5d4201",
+        "on-background": "#1b1c1a",
+        "on-surface-variant": "#4e4639",
+        "on-error": "#ffffff",
+        "surface-container-highest": "#e4e2df",
+        "on-secondary-fixed": "#1c1b1b",
+        "onyx-muted": "#2C2C2C",
+        "inverse-surface": "#30312f",
+        "tertiary-fixed": "#c8ead8",
+        "on-secondary-container": "#636262",
+        "champagne-light": "#E8D7AA"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "gutter-desktop": "2.5rem",
+        "space-xl": "3rem",
+        "margin": "1.25rem",
+        "margin-desktop": "4rem",
+        "space-xs": "0.25rem",
+        "space-sm": "0.5rem",
+        "gutter": "1.5rem",
+        "space-md": "1rem",
+        "space-lg": "1.75rem"
+      },
+      "fontFamily": {
+        "headline-lg": ["Playfair Display"],
+        "body-lg": ["Plus Jakarta Sans"],
+        "display-hero": ["Playfair Display"],
+        "body-sm": ["Plus Jakarta Sans"],
+        "headline-sm": ["Playfair Display"],
+        "label-md": ["Plus Jakarta Sans"],
+        "headline-lg-mobile": ["Playfair Display"],
+        "headline-md": ["Playfair Display"],
+        "display-hero-mobile": ["Playfair Display"],
+        "label-caps": ["Plus Jakarta Sans"],
+        "body-md": ["Plus Jakarta Sans"],
+        "subhead-lg": ["Plus Jakarta Sans"]
+      },
+      "fontSize": {
+        "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+        "body-lg": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+        "display-hero": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+        "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}],
+        "headline-sm": ["22px", {"lineHeight": "30px", "fontWeight": "500"}],
+        "label-md": ["13px", {"lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "400"}],
+        "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "500"}],
+        "display-hero-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+        "label-caps": ["11px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600"}],
+        "body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+        "subhead-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}]
+      }
+    }
+  }
+}</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-champagne-light selection:text-onyx-muted"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(26,26,26,0.03)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="ethima Diamond Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VuUzekjdOMwIreHXbdWYtBmwR6NOflTkAM0a0aw7pBQ-69PsY9ldsqO7fq8LjEAxJISTxjvDEqxMBt_9nRuZ7RvOiDuOz0PwJTSDz_DjukSwn74N6N7B2EnuP-FUKcAkYGFN0W6QMVGmdCvUD1RZblvZFk6y5eHx3a0cpygck3eBkrfapkXKnOY2PZILMTTZvmzy8KzP9UMfPsQg1F-prvnC1rg_xIgFa47d2eDYdDtw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-none">ethima</span><span class="font-label-caps text-label-caps text-primary tracking-widest uppercase text-[10px]">Atelier CRM</span></div></div><div class="flex items-center gap-space-sm"><div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-champagne-pure/10 rounded-full"><span class="w-1.5 h-1.5 rounded-full bg-champagne-pure animate-pulse"></span><span class="font-label-caps text-label-caps text-primary font-semibold tracking-wider text-[10px] uppercase">VIP Concierge Live</span></div><button aria-label="Account Profile" class="w-11 h-11 rounded-full flex items-center justify-center p-0.5 focus:outline-none"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_2px_8px_rgba(26,26,26,0.08)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGoH-C_jrjKD9cGw1EPtuXL8es8fX7hKi3e9SrjMtQSSpgBLCzGuBynhkzcbmcWlyHSjChVsno57TYJI3yCjnQeUVWOSY9Drxi211YX02jrVFJLp6MV7LcJno-FJFVjeQKp9Z9hMwYGuyweSZ28QtXisA5NKLBuKLFF4ujc3dGvqJFUZa2v2IJyViqSLZ8xlUVBGG64iV1MlGC1_AUaXInDyHN2AzXa6yWenOPTBSP"/></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full">
+<!-- Atelier Studio Banner & Sub-Header -->
+<div class="px-margin pt-space-md pb-space-sm flex items-center justify-between">
+<div class="flex flex-col">
+<div class="inline-flex items-center gap-1.5 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-sage"></span>
+<span class="font-label-caps text-label-caps text-tertiary tracking-widest uppercase">Bespoke Diamond Atelier</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">Studio Pipeline</h1>
+</div>
+<div class="flex items-center gap-2">
+<button aria-label="Filter stages" class="flex items-center justify-center w-9 h-9 rounded-full bg-surface-container-low text-on-surface shadow-sm active:scale-95 transition-transform" id="filterPipelineBtn">
+<span class="material-symbols-outlined text-[19px]">tune</span>
+</button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-on-surface text-surface shadow-sm active:scale-95 transition-transform" id="quickNewLeadBtn">
+<span class="material-symbols-outlined text-[16px] text-champagne-pure">add</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-[10px]">New Lead</span>
+</button>
+</div>
+</div>
+<!-- Key Metrics Bento Tiles -->
+<div class="px-margin mb-space-md">
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Metric 1: Inquiries -->
+<div class="p-3.5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider text-[10px]">Active Inquiries</span>
+<span class="w-6 h-6 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+</span>
+</div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">148</span>
+<span class="font-label-caps text-label-caps text-tertiary text-[10px] font-bold">+18% wk</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-2.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 78%;"></div>
+</div>
+</div>
+<!-- Metric 2: CAD Approval -->
+<div class="p-3.5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider text-[10px]">CAD Approvals</span>
+<span class="w-6 h-6 rounded-full bg-emerald-sage/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[14px]">view_in_ar</span>
+</span>
+</div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">62%</span>
+<span class="font-label-caps text-label-caps text-tertiary text-[10px] font-bold">Optimal</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-2.5 overflow-hidden">
+<div class="bg-emerald-sage h-full rounded-full" style="width: 62%;"></div>
+</div>
+</div>
+<!-- Metric 3: Average Ticket -->
+<div class="p-3.5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider text-[10px]">Avg Order Value</span>
+<span class="w-6 h-6 rounded-full bg-champagne-pure/15 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[14px]">payments</span>
+</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">₹2.45L</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">/ custom</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant text-[9px] mt-2 tracking-wider">HIGHEST TIER: SOLITAIRES</span>
+</div>
+<!-- Metric 4: Cycle Time -->
+<div class="p-3.5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider text-[10px]">Concept to Box</span>
+<span class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[14px]">speed</span>
+</span>
+</div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">12 Days</span>
+<span class="font-label-caps text-label-caps text-tertiary text-[10px] font-bold">-3d SLA</span>
+</div>
+<span class="font-label-caps text-label-caps text-tertiary text-[9px] mt-2 tracking-wider uppercase font-semibold">Fast-track CAD Engine</span>
+</div>
+</div>
+</div>
+<!-- Stage Navigation Bar with Funnel Progress -->
+<div class="px-margin mb-space-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-widest text-[11px] font-bold">Automated Funnel Stages</span>
+<span class="font-body-sm text-body-sm text-primary text-[12px] font-medium">5 Stages Active</span>
+</div>
+<!-- Horizontal Stage Selector Pills -->
+<div class="flex gap-2 overflow-x-auto pb-2 scrollbar-none" id="stagePillsContainer">
+<button class="stage-pill flex-shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-caps text-label-caps text-[10px] tracking-wider transition-all" data-stage="1">
+<span class="w-4 h-4 rounded-full bg-surface-container-lowest flex items-center justify-center text-[9px] font-bold">1</span>
+<span>Inspiration</span>
+</button>
+<button class="stage-pill flex-shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-caps text-label-caps text-[10px] tracking-wider transition-all" data-stage="2">
+<span class="w-4 h-4 rounded-full bg-surface-container-lowest flex items-center justify-center text-[9px] font-bold">2</span>
+<span>Stone Match</span>
+</button>
+<button class="stage-pill active flex-shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-on-surface text-surface font-label-caps text-label-caps text-[10px] tracking-wider shadow-sm transition-all" data-stage="3">
+<span class="w-4 h-4 rounded-full bg-champagne-pure text-on-surface flex items-center justify-center text-[9px] font-bold">3</span>
+<span>3D CAD &amp; Wax</span>
+</button>
+<button class="stage-pill flex-shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-caps text-label-caps text-[10px] tracking-wider transition-all" data-stage="4">
+<span class="w-4 h-4 rounded-full bg-surface-container-lowest flex items-center justify-center text-[9px] font-bold">4</span>
+<span>IGI Cert</span>
+</button>
+<button class="stage-pill flex-shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-caps text-label-caps text-[10px] tracking-wider transition-all" data-stage="5">
+<span class="w-4 h-4 rounded-full bg-surface-container-lowest flex items-center justify-center text-[9px] font-bold">5</span>
+<span>White Glove</span>
+</button>
+</div>
+</div>
+<!-- Featured Spotlight Lead Card -->
+<div class="px-margin mb-space-md">
+<div class="rounded-xl bg-surface-container-lowest shadow-md overflow-hidden transition-all duration-300">
+<!-- Lead Header Strip with Luxury Emerald Accent -->
+<div class="px-4 py-3 bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-emerald-sage/10 text-emerald-sage font-label-caps text-label-caps text-[9px] tracking-widest uppercase font-semibold">Hot Lead • Stage 3</span>
+<span class="text-on-surface-variant text-[11px] font-body-sm">Created 2d ago</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-champagne-pure animate-ping"></span>
+<span class="font-label-caps text-label-caps text-primary text-[10px] tracking-widest font-semibold uppercase">Approval Due Today</span>
+</div>
+</div>
+<!-- Lead Details & Client Lockup -->
+<div class="p-4">
+<div class="flex items-start justify-between gap-3 mb-3">
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Ananya Mehta</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Solitaire Halo Ring with Emerald Cut Diamond</p>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">₹2,85,000</span>
+<div class="inline-block mt-0.5 px-1.5 py-0.5 bg-champagne-pure/15 text-primary font-label-caps text-label-caps text-[9px] uppercase tracking-wider rounded">65% vs Mined</div>
+</div>
+</div>
+<!-- Visual Spec Grid & 3D Interactive Mockup Visual -->
+<div class="relative rounded-lg overflow-hidden bg-surface-container-low mb-3.5">
+<div class="relative w-full h-44 bg-surface-container flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up luxury macro render of an emerald cut lab-grown diamond ring in 18k yellow gold with delicate pavé halo on warm cream silk fabric, studio lighting with brilliant sparkle refractions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfEt-a8uToPITlQ4dQN8VP9-XrbppuYCQcoRPdyCWjT7gjVR34rniy4XWTAnWbOuuVZxatCPB8_um381vcsNGpgJAzgTWD75DGBM1u5lZjKSVaArw-2wTsDGdywokZhD7c2Z5JXIFq1simJvfh9K9KyYlNbEsZQqxljYm1H5OjAp3u3a5RI1GDJnrnBbnLqMCXdvQbhAS4JQOKgEDC2Sv1ksRur8_dtL-5LuNqIAvg"/>
+<!-- Interactive 360 Overlay Badge -->
+<div class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-full bg-on-surface/80 backdrop-blur-md text-surface flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-champagne-light">360</span>
+<span class="font-label-caps text-label-caps text-[9px] tracking-wider uppercase">360° Interactive CAD Model</span>
+</div>
+<div class="absolute bottom-2.5 right-2.5 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px] text-tertiary">verified</span>
+<span class="font-label-caps text-label-caps text-[9px] uppercase font-bold">IGI LG592318</span>
+</div>
+</div>
+<!-- Stone Specifics Bar -->
+<div class="px-3.5 py-2.5 bg-surface-container-low grid grid-cols-4 gap-2 text-center">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant text-[9px] block">CARAT</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold text-[13px]">2.14 ct</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant text-[9px] block">CUT</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold text-[13px]">Emerald Ex</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant text-[9px] block">COLOR</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold text-[13px]">E (Rare)</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant text-[9px] block">CLARITY</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold text-[13px]">VVS1</span>
+</div>
+</div>
+</div>
+<!-- Inspiration vs CAD Source Reference -->
+<div class="p-3 rounded-lg bg-cream-surface mb-4 flex items-center gap-3">
+<div class="w-12 h-12 rounded overflow-hidden flex-shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Customer Pinterest inspiration moodboard clipping showing celebrity emerald cut engagement ring style sketch in minimalist jewelry notebook" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg1Exm2RvTXm95wUHHyLb1ainZlD1lFncmCSPLt7yY81y7DxOXQyLnAwaaqU5Hgr5oBRotmnGlEsRhjL__9M6nol5G9Sp9axPn4S1bu6Juy2bzhdF2wv2cPNdI3vgIljE9MzZ6Fb4NfAkDERXCC4DUeMI_Z16bZA4BSZevrbozNrwnrwva_bhb5KoB72B2OaPRifBHIzsT4aTR0CjAl4CGgI4w42f9yqnjofWccH_x"/>
+</div>
+<div class="flex-1 min-w-0">
+<span class="font-label-caps text-label-caps text-on-surface-variant text-[9px] uppercase tracking-wider block">Customer Ingestion Source</span>
+<span class="font-body-md text-body-md text-on-surface font-medium truncate block text-[13px]">Pinterest Pin #8942 • Vintage French Halo</span>
+<span class="font-body-sm text-body-sm text-tertiary text-[11px]">Matched in inventory (98.4% spec match)</span>
+</div>
+<button aria-label="View original reference" class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface-variant shadow-sm">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+<!-- Automated WhatsApp / SMS Nudge Timeline -->
+<div class="mb-4">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-widest text-[10px] font-bold">Automation Funnel Journey</span>
+<span class="font-label-caps text-label-caps text-tertiary text-[10px] uppercase font-semibold">3 Delivered • 1 Pending</span>
+</div>
+<div class="space-y-2.5">
+<!-- Step 1: Ingestion Confirmation -->
+<div class="flex items-start gap-2.5">
+<div class="w-5 h-5 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center mt-0.5 flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">WhatsApp: Sketch Received &amp; Curated</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[10px]">T-48h</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">Shared master gemologist greeting with 4 diamond inventory options.</p>
+</div>
+</div>
+<!-- Step 2: Stone Selection Confirmed -->
+<div class="flex items-start gap-2.5">
+<div class="w-5 h-5 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center mt-0.5 flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Client Selected 2.14ct E/VVS1 Lab Grown</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[10px]">T-24h</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">IGI Certificate digital passport unlocked via ethima vault link.</p>
+</div>
+</div>
+<!-- Step 3: CAD Preview Sent -->
+<div class="flex items-start gap-2.5">
+<div class="w-5 h-5 rounded-full bg-champagne-pure text-on-surface flex items-center justify-center mt-0.5 flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">send</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">360° Studio Render Delivered</span>
+<span class="font-body-sm text-body-sm text-primary text-[10px] font-semibold">T-4h • Opened 3x</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">Customer viewed 3D model on mobile (average session 142s).</p>
+</div>
+</div>
+<!-- Step 4: Pending Action -->
+<div class="flex items-start gap-2.5">
+<div class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center mt-0.5 flex-shrink-0">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Auto-Nudge for Ring Size &amp; Wax Cast Approval</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[10px]">Scheduled 4:00 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">Trigger fires if no approval within 6 hours of opening.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- One-Click Automation Triggers -->
+<div class="pt-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant text-[9px] uppercase tracking-wider block mb-2 font-semibold">Instant Atelier Triggers</span>
+<div class="grid grid-cols-1 gap-2">
+<button class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg bg-on-surface text-surface shadow-sm active:scale-[0.98] transition-all" id="triggerCadBtn">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-champagne-light">view_in_ar</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-[11px]">Resend CAD Preview to WhatsApp</span>
+</div>
+<span class="font-label-caps text-label-caps text-[9px] text-champagne-pure font-bold">1-TAP SEND</span>
+</button>
+<div class="grid grid-cols-2 gap-2">
+<button class="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-high text-on-surface font-label-caps text-label-caps text-[10px] tracking-wider uppercase active:scale-95 transition-all" id="triggerNudgeBtn">
+<span class="material-symbols-outlined text-[15px] text-primary">notifications_active</span>
+<span>Nudge Approval</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-high text-on-surface font-label-caps text-label-caps text-[10px] tracking-wider uppercase active:scale-95 transition-all" id="triggerSizerBtn">
+<span class="material-symbols-outlined text-[15px] text-tertiary">local_shipping</span>
+<span>Dispatch Sizer</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Complete Visual Pipeline Stages Kanban / Overview -->
+<div class="px-margin mb-space-lg">
+<div class="flex items-center justify-between mb-3">
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-medium">Bespoke Studio Flow</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Overview of all active client journeys</span>
+</div>
+<span class="font-label-caps text-label-caps text-tertiary bg-emerald-sage/10 px-2 py-0.5 rounded text-[10px] uppercase font-bold">Auto-Sync</span>
+</div>
+<!-- Pipeline Stages Collapsible Vertical Cards -->
+<div class="space-y-2.5">
+<!-- Stage 1 -->
+<div class="p-3.5 rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-cream-surface flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">brush</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-body-md text-body-md font-semibold text-on-surface">1. Inspiration Ingestion</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface text-[10px] font-bold">29 leads</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Upload sketch, Pinterest moodboard &amp; budget range</p>
+</div>
+</div>
+<button aria-label="Open Stage 1" class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Stage 2 -->
+<div class="p-3.5 rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-champagne-pure/15 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">diamond</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-body-md text-body-md font-semibold text-on-surface">2. Gemologist Stone Match</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface text-[10px] font-bold">44 leads</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Algorithm parses 10,000+ certified lab-grown stones</p>
+</div>
+</div>
+<button aria-label="Open Stage 2" class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Stage 3 (Current Active Highlight) -->
+<div class="p-3.5 rounded-xl bg-surface-container-lowest shadow-md flex items-center justify-between ring-1 ring-primary/20">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-on-surface text-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px] text-champagne-light">view_in_ar</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-body-md text-body-md font-semibold text-on-surface">3. 3D CAD &amp; Wax Model</span>
+<span class="px-1.5 py-0.2 rounded bg-champagne-pure/20 text-primary text-[10px] font-bold">38 leads</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">360° interactive view &amp; toggle feedback lock</p>
+</div>
+</div>
+<button aria-label="Open Stage 3" class="w-8 h-8 rounded-full bg-on-surface text-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+<!-- Stage 4 -->
+<div class="p-3.5 rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-emerald-sage/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-body-md text-body-md font-semibold text-on-surface">4. BIS Hallmarking &amp; IGI Cert</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface text-[10px] font-bold">22 leads</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Laser inscription verification &amp; digital report</p>
+</div>
+</div>
+<button aria-label="Open Stage 4" class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Stage 5 -->
+<div class="p-3.5 rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-cream-surface flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-body-md text-body-md font-semibold text-on-surface">5. Tamper-Proof Luxury Box</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface text-[10px] font-bold">15 leads</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Insured white-glove courier dispatch &amp; unboxing link</p>
+</div>
+</div>
+<button aria-label="Open Stage 5" class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Notification Toast Container (Dynamic Interaction) -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 w-[90%] max-w-sm px-4 py-3 rounded-lg bg-on-surface text-surface shadow-xl flex items-center gap-3 opacity-0 pointer-events-none transition-all duration-300 z-40" id="toastNotification">
+<span class="material-symbols-outlined text-[20px] text-champagne-light" id="toastIcon">check_circle</span>
+<div class="flex-1">
+<span class="font-body-sm text-body-sm font-semibold block text-[13px]" id="toastTitle">Automated Trigger Fired</span>
+<span class="font-body-sm text-body-sm text-surface-dim text-[11px] block" id="toastMessage">3D Model preview resent to Ananya via WhatsApp</span>
+</div>
+</div>
+<!-- Micro-interactions Script -->
+<script>
+    (function initCustomStudio() {
+      const toast = document.getElementById('toastNotification');
+      const toastTitle = document.getElementById('toastTitle');
+      const toastMessage = document.getElementById('toastMessage');
+      const toastIcon = document.getElementById('toastIcon');
+
+      function showToast(title, msg, icon = 'check_circle') {
+        if (!toast) return;
+        toastTitle.textContent = title;
+        toastMessage.textContent = msg;
+        toastIcon.textContent = icon;
+        toast.classList.remove('opacity-0', 'pointer-events-none');
+        toast.classList.add('opacity-100');
+
+        setTimeout(() => {
+          toast.classList.add('opacity-0', 'pointer-events-none');
+          toast.classList.remove('opacity-100');
+        }, 3200);
+      }
+
+      // One-Click Triggers
+      const btnCad = document.getElementById('triggerCadBtn');
+      if (btnCad) {
+        btnCad.addEventListener('click', () => {
+          showToast('Interactive CAD Resent', 'Dispatched 360° interactive link to Ananya Mehta (+91 98201 XXXXX)', 'send');
+        });
+      }
+
+      const btnNudge = document.getElementById('triggerNudgeBtn');
+      if (btnNudge) {
+        btnNudge.addEventListener('click', () => {
+          showToast('Approval Nudge Queued', 'Gentle reminder with 48h gold-lock timer sent to client WhatsApp', 'notifications_active');
+        });
+      }
+
+      const btnSizer = document.getElementById('triggerSizerBtn');
+      if (btnSizer) {
+        btnSizer.addEventListener('click', () => {
+          showToast('Ring Sizer Dispatched', 'Complimentary brass ring sizer kit routed via Bluedart Priority', 'local_shipping');
+        });
+      }
+
+      const btnNewLead = document.getElementById('quickNewLeadBtn');
+      if (btnNewLead) {
+        btnNewLead.addEventListener('click', () => {
+          showToast('Atelier Ingestion Open', 'Waiting for Pinterest pin or reference sketch upload...', 'auto_awesome');
+        });
+      }
+
+      // Stage Pill Click Filtering
+      const pills = document.querySelectorAll('.stage-pill');
+      pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          pills.forEach(p => {
+            p.classList.remove('bg-on-surface', 'text-surface', 'shadow-sm');
+            p.classList.add('bg-surface-container-high', 'text-on-surface');
+          });
+          pill.classList.remove('bg-surface-container-high', 'text-on-surface');
+          pill.classList.add('bg-on-surface', 'text-surface', 'shadow-sm');
+          
+          const stageNumber = pill.getAttribute('data-stage');
+          showToast(`Filtered: Stage ${stageNumber}`, `Displaying active bespoke orders in stage ${stageNumber}`, 'filter_alt');
+        });
+      });
+    })();
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_24px_rgba(26,26,26,0.04)]" data-active-classes="text-primary"><div class="flex justify-around items-center h-20 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] h-14 text-on-surface-variant transition-colors group" data-path="funnels" href="#"><span class="material-symbols-outlined text-[22px] group-hover:text-primary transition-colors">filter_alt</span><span class="font-label-caps text-label-caps tracking-widest mt-1 text-[10px] group-hover:text-primary transition-colors uppercase">Funnels</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] h-14 text-on-surface-variant transition-colors group" data-path="whatsapp-flow" href="#"><span class="material-symbols-outlined text-[22px] group-hover:text-primary transition-colors">chat_bubble</span><span class="font-label-caps text-label-caps tracking-widest mt-1 text-[10px] group-hover:text-primary transition-colors uppercase">WhatsApp</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] h-14 transition-colors group text-primary" data-path="custom-studio" href="#"><span class="material-symbols-outlined text-[22px] group-hover:text-primary transition-colors">diamond</span><span class="font-label-caps text-label-caps tracking-widest mt-1 text-[10px] group-hover:text-primary transition-colors uppercase">Studio</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] h-14 text-on-surface-variant transition-colors group" data-path="analytics" href="#"><span class="material-symbols-outlined text-[22px] group-hover:text-primary transition-colors">query_stats</span><span class="font-label-caps text-label-caps tracking-widest mt-1 text-[10px] group-hover:text-primary transition-colors uppercase">Analytics</span></a></div></nav></body></html>
