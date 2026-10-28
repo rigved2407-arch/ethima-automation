@@ -40,7 +40,7 @@ The following are explicitly outside this package and require a separate quote:
 - Automated aftercare, anniversary, referral, or repeat-purchase campaigns.
 - Advanced analytics, revenue attribution, AI agents, or predictive scoring.
 - Multi-location routing or complex staff permissions.
-- Paid advertising automation, Meta Ads, Google Ads, or campaign management.
+- Paid campaign management or advertising integrations.
 - Custom mobile applications or a custom backend dashboard.
 
 The repository may retain earlier concept screens as **reference material only**. They are not included in the MVP implementation or price.
